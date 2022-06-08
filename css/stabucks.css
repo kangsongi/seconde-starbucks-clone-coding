@@ -1,0 +1,634 @@
+/* *공통 css* */
+body {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration-line: none;
+}
+
+/* *header* */
+/* 메뉴 배경높이 + 색상 설정 */
+#manu {
+    height: 120px;
+    background-color: #f6f5EF;
+}
+/* 메뉴 가로 정렬 + 폰트 색상, 사이즈, 폰트 스타일*/
+#ma1 {
+    height: 70px;
+}
+#ma1 > ul > li {
+    float: left;
+    margin: 20px 0px 0px 20px;
+}
+#ma1 > ul > li:nth-child(2) {
+    margin-left: 400px;
+}
+#ma1 > ul > li > a {
+    color: #555555;
+    font-size: 13px;
+    font-family: Avenir, Arial, georgia;
+}
+#ma1 > ul > li > a:hover {
+    text-decoration: underline;
+}
+/* 로고 이미지 사이즈 + 위치 이동 */
+#ma1 > ul > li > img {
+    margin: 3px 0px 0px 80px;
+}
+/* 돋보기 버튼 이미지 색상 변경  */
+#ma1 > ul > li > a > button {
+    background-color: white;
+    border-color: gray;
+    border-width: thin;
+    border-radius:5px;
+}
+
+/* 서브메뉴 */
+/* 가로정렬 */
+#ma2 > ul > li {
+    float: left;
+    font-size:13px;
+}
+#ma2 > ul > li > h2 > a {
+    color: #333333;
+}
+#ma2 > ul > li > h2 > a:hover {
+    color: #669900;
+    text-decoration: underline;
+}
+#ma2 > ul > li > ul > li > a{
+    color: #333333;
+}
+#ma2 > ul > li > ul {
+    float: left;
+        /* 숨김처리 */
+        /* z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        display: none;   */
+        position: absolute;
+        z-index: 1000;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 180ms ease-out;
+}
+#ma2 > ul > li > h2 {
+    margin: 0px 30px 0px 0px;
+    font: normal 13px Avenir, Arial, georgia;
+}
+#ma2 > ul > li > h2 > a:nth-child(1) {
+    margin-left: 10px;
+}
+#ma2 > ul > li:nth-child(1) {
+    margin-left:230px;
+}
+#ma2 > ul > li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.5;
+}
+#ma2 > ul > li > h2:hover {
+    width: 100%;
+    height: 50px;
+    background-color:black;
+    text-align: center;
+}
+
+/** main **/
+/* 메인화면 */
+#main {
+    height: 650px;
+    width:100%;
+    background-image: url("../img/img101.jpg");
+    position: relative;
+    background-position: -440px 0px;
+}
+#main > div > img {
+    margin: 60px 0px 0px 60px;
+}
+#main > div > button {
+    height: 40px;
+    width: 150px;
+    border-radius:5px;
+    display: block;
+    margin: 20px 0px 0px 110px;
+    color: #d73a7a;
+    border: 2px solid #d73a7a;
+    background-color:transparent;
+}
+#main > div > button:hover {
+    background-color: #d73a7a;
+    color: white;
+    text-decoration: underline;
+    -webkit-transition: background-color 1s;
+}
+
+/* 메인안에 이미지 위치 이동 */
+#maimg1 > img{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    animation: dri 2s;
+}
+#maimg2 > img {
+    position: absolute;
+    top: 50px;
+    left: 320px;
+    animation: dri 3s;
+}
+#maimg3 > img {
+    position: absolute;
+    top: 70px;
+    left: 850px;
+    animation: dri 4s;
+}
+/* 애니메이션 */
+@keyframes dri {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+/* 공지사항 */
+/*공지사항 가로정렬*/
+#notice{
+    height: 60px;
+}
+#notice > div {
+    float: left;
+}
+#noti-1 {
+    background-color: black;
+    width: 600px;
+    height: 60px;
+}
+#noti-1 > img {
+    margin: 0px 25px 13px 130px;
+}
+#noti-1 > span{
+    color: white;
+    position: relative;
+    left: 20px;
+    bottom: 15px;
+}
+/* 공지사항 버튼 스타일 */
+#noti-1 > button {
+    background-color:transparent;
+    border: 0;
+    outline: 0;
+}
+#noti-1 > button > img {
+    width: 70px;
+    margin-left:80px;
+    margin-top: 2px;
+}
+/* 프로모션 img 스타일 */
+#noti-2 {
+    background-color:#f6f5EF;
+    width: 629px;
+    height: 60px;
+}
+#noti-2 > img {
+    height: 30%;
+    margin-left: 120px;
+    margin-bottom: 10px;
+}
+#noti-2 > button {
+    background-color:transparent;
+    border: 0;
+    outline: 0;
+}
+#noti-2 > button > img {
+    margin:10px 0px 0px 80px;
+    width: 35%;
+}
+
+/* 회원가입 */
+/* 회원가입 배경화면색상 + 높이 설정 */
+#user {
+    background-color: #1e3932;
+    height: 270px;
+    position: relative;
+}
+/* 로고 사이즈 */
+#us1 > img {
+    width: 15%;
+    margin-left: 50px;
+    margin: 50px 0px 0px 150px;
+}
+#us2 {
+    position: absolute;
+    left: 400px;
+    top:45px;
+    color: white;
+}
+#us2 > ul > li {
+    float: left;
+}
+#us2 > ul > li > p {
+    line-height:25px;
+    font-size:18px;
+}
+#us2 > p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+#us2 > ul > li > button:nth-child(1) {
+    background-color:#00704a;
+    border: 0;
+    outline: 0;
+    color: white;
+    border-radius: 5px;
+    margin-left:5px;
+    height: 40px;
+    width: 90px;
+    margin-left: 56px;
+}
+#us2 > ul > li > button:nth-child(2) {
+    background-color:transparent;
+    color: white;
+    height: 40px;
+    width: 90px;
+    border-radius: 5px;
+    border-color: white;
+}
+/* hr스타일 */
+#user > hr{
+    width: 800px;
+    position: absolute;
+    top: 150px;
+    left: 400px;
+}
+#us3 {
+    color: white;
+}
+#us3 > ul > li {
+    float: left;
+    line-height:25px;
+    position: absolute;
+    left: 400px;
+    top: 180px;
+}
+#us3 > ul > li > p {
+    font-size: 15px;
+}
+#us3 > ul > li > button {
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color:transparent;
+    border-color: white;
+    color: white;
+    margin-left: 650px;
+}
+
+/* 원두소개 */
+#product {
+    background-image: url("	https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Summer1_bean_bg2.jpg");
+    height: 572px;
+    position: relative;
+}
+/* 디자인 이미지 사이즈 */
+#pro1 > img:nth-child(1) {
+    position: absolute;
+    bottom: 180px;
+}
+#pro1 > img:nth-child(2) {
+    position: absolute;
+    right: -10px;
+    top: 220px;
+}
+/* 제품이미지 위치 */
+#pro2 > img {
+    position: absolute;
+    left: 300px;
+    top: 110px;
+    animation: img1 2s ease-out;
+}
+/* 제품에 대한 설명 위치 */
+#pro3  {
+    position: absolute;
+    left: 670px;
+    top: 190px;
+    animation: img2 2s ease-out;
+}
+#pro3 > button{
+    position: absolute;
+    top: 180px;
+    right: 200px;
+    width: 120px;
+    height: 40px;
+    border-color: #1e245c;
+    border-radius:5px;
+    color: #1e245c;
+    background-color:transparent;
+}
+#pro3 > button:hover {
+    background-color: #1e245c;
+    color: white;
+    text-decoration: underline;
+    -webkit-transition: background-color 1s;
+}
+/* 애니메이션 주기 */
+@keyframes img1 {
+    from {
+        left:-130px;
+        opacity: 0;
+    }
+    to {
+        left:300px;
+        opacity: 1;
+    }
+}
+@keyframes img2 {
+    from {
+        right:-130px;
+        opacity: 0;
+    }
+    to {
+        right:270px;
+        opacity: 1;
+    }
+}
+
+/* 스타벅스 해외원두 */
+/* 배경 url + 높이 설정 */
+#beans {
+    background-image: url("https://image.istarbucks.co.kr/img/event/2022/reserve_2022_indonesia_visual_bg.jpg");
+    height: 400px;
+    position: relative;
+}
+#be0 >img:nth-child(1) {
+    width: 280px;
+    position: absolute;
+    top: 195px;
+} 
+#be0 >img:nth-child(2) {
+    width: 280px;
+    position: absolute;
+    top: 250px;
+    right: 0px;
+    z-index: 3;
+} 
+#be1 > img {
+    width: 400px;
+    position: absolute;
+    top: 120px;
+    left: 200px;
+}
+#be1 > button {
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    border-color: #b9813e;
+    color: #b9813e;
+    border-radius:5px;
+    width: 120px;
+    height: 40px;
+    background-color:transparent;
+}
+#be1 > button:hover {
+    background-color: #b9813e;
+    color: white;
+    text-decoration: underline;
+    -webkit-transition: background-color 1s;
+}
+#be2 > img {
+    z-index:2;
+    position: absolute;
+    left: -300px;
+}
+/* 스타벅스 다양한 메뉴 */
+/* 배경화면 지정 + 높이 설정 */
+#pick {
+    background: url("https://www.starbucks.co.kr/common/img/main/fav_prod_bg_new.jpg") fixed;
+    background-size: auto 100%;
+    height: 750px;
+    position: relative;
+}
+#pi1 > img {
+    display: block;
+    width: 270px;
+    animation: pi11 2s ease-out;
+}
+#pi1 > img:nth-child(1) {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+#pi1 > img:nth-child(2) {
+    position: absolute;
+    top: 350px;
+    left: 200px;
+}
+#pi1 > button {
+    height: 40px;
+    width: 140px;
+    border-radius: 5px;
+    border-color: white;
+    background-color:transparent;
+    color: white;
+    margin-top:40px;
+    position:absolute;
+    top: 480px;
+    left: 330px;
+    animation: bu 3s ease-out;
+}
+#pi1 > button:hover {
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+    -webkit-transition: background-color 1s;
+}
+#pi2 > img {
+    width: 600px;
+    position: absolute;
+    left: 600px;
+    top: 130px;
+}
+@keyframes pi11 {
+    from {
+        left:-130px;
+        opacity: 0;
+    }
+    to {
+        left:200px;
+        opacity: 1;
+    }
+}
+@keyframes bu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* *스타벅스 메거진* */
+/* 배경화면 설정 */
+#magazine {
+    background: url(https://image.istarbucks.co.kr/upload/common/img/main/2021/reserve_bg_pc.png) no-repeat 50% 100%;
+    background-size: auto 353px;
+    position: relative;
+    height: 420px;
+}
+#mag1 {
+    position: absolute;
+    left: 100px;
+    top: 170px;
+}
+#mag1 > button {
+    display: block;
+    width: 120px;
+    height: 40px;
+    border-color: black;
+    background-color:transparent;
+    border-radius:5px;
+    position: absolute;
+    top: 130px;
+    left: 250px;
+}
+#mag1 > button:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+    -webkit-transition: background-color 1s;
+}
+#mag2 > img{
+    width: 350px;
+    position: absolute;
+    top: 50px;
+    left: 750px;
+}
+
+/* 스타벅스 매장찾기 */
+/* 배경화면 지정 */
+#store {
+    background: url("https://www.starbucks.co.kr/common/img/main/store_bg.jpg");
+    position: relative;
+    height: 400px;
+}
+#st1 > img:nth-child(1){
+    margin-left: 120px;
+}
+#st1 > img:nth-child(2){
+    position: absolute;
+    top:140px;
+    left: 320px;
+}
+#st2 > img:nth-child(1){
+    position: absolute;
+    left: 750px;
+    bottom: 220px;
+}
+#st2 > img:nth-child(2){
+    position: absolute;
+    left: 750px;
+    bottom: 140px;
+}
+#st2 > button {
+    position: absolute;
+    left: 750px;
+    bottom: 80px;
+    border-color: black;
+    background-color:transparent;
+    border-radius:5px;
+    width: 120px;
+    height: 40px;
+}
+#st2 > button:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+    -webkit-transition: background-color 1s;
+}
+
+/* *스타벅스 매장찾기* */
+/* 배경화면 사이즈 + 색상 */
+footer {
+    background-color: #2C2A29;
+    color: white;
+    height: 900px;
+    display: block;
+    margin: auto;
+    font-size:13px;
+}
+footer > div > ul {
+    padding-top: 50px;
+}
+#fo1 > ul > li > a{
+    color: white;
+    display: block;
+    margin-top: 20px;
+}
+#fo1 > ul > li {
+    float: left;
+    margin-left:140px;
+    width:140px;
+    height: 240px;
+    margin-top:20px;
+}
+#fo1 > ul > li:nth-child(1) {
+    margin-left:250px;
+}
+#fo1 > ul > li:nth-child(5) {
+    margin-left:250px;
+}
+
+#fo2 {
+    height: 300px;
+    background-color:#2C2A29;
+    margin-top: 500px;
+}
+#fo2 > ul > li {
+    float: left;
+    font-size:12px;
+    margin-left: 10px;
+}
+#fo2 > ul > li > a {
+    color: white;
+}
+#fo2 > ul:nth-child(1) > li:nth-child(1) {
+    margin-left:80px;
+}
+#fo2 > ul > li > button {
+    border: 3px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    background-color:transparent;
+    width: 120px;
+    height: 40px;
+}
+#fo2 > ul > li > button > a {
+    color: white;
+}
+#fo2 > ul:nth-child(2) > li:nth-child(1) {
+    margin-left:450px;
+}
+#fo2 > ul:nth-child(3) {
+    margin-left:250px;
+}
+#fo2 > ul:nth-child(3) > li {
+    margin: 20px 20px 0px 0px;
+}
+#fo3 > p {
+    margin-top: 60px;
+    margin-left: 500px;
+}
+
+
+
+
+
+
+
+
+
